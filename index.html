@@ -30,6 +30,72 @@
 
   <body>
     <!-- Header Start -->
+    <header
+      id="navbar"
+      class="bg-secondColor fixed w-full top-0 left-0 z-50 shadow-md"
+    >
+      <nav class="max-w-[1920px] h-20 mx-auto md:px-10 px-5 flex items-center">
+        <!-- Logo -->
+        <img
+          class="w-28 mr-10 sm:mr-32"
+          src="assets/images/logo.png"
+          alt="Logo"
+        />
+        <!-- Logo -->
+
+        <!-- Mobile Menu -->
+        <div
+          id="nav-menu"
+          class="bg-whiteColor absolute top-20 left-[-100%] h-screen w-3/4 lg:w-1/2 xl:hidden duration-300"
+        >
+          <div class="flex flex-col gpa-1">
+            <a href="#home" class="nav-link active">Home</a>
+
+            <a href="#about" class="nav-link">About</a>
+
+            <a href="#company" class="nav-link">Company</a>
+
+            <a href="#review" class="nav-link">Review</a>
+
+            <a href="#contact" class="nav-link">Contact</a>
+
+            <a href="tel:+8801689190142" class="phone-number">
+              <i class="ri-phone-line"></i> +880 1689 190142
+            </a>
+          </div>
+        </div>
+        <!-- Mobile Menu -->
+
+        <!-- Menu Icon -->
+        <div class="text-whiteColor text-xl sm:text-3xl cursor-pointer z-50">
+          <i class="ri-menu-4-line" id="menu-icon"></i>
+        </div>
+        <!-- Menu Icon -->
+
+        <!-- Desktop Menu -->
+        <div
+          id="nav-menu-2"
+          class="hidden xl:block bg-whiteColor absolute top-[-100%] left-[30%] h-20 w-max duration-300"
+        >
+          <div class="flex items-center justify-center h-full">
+            <a href="#home" class="nav-link active">Home</a>
+
+            <a href="#about" class="nav-link">About</a>
+
+            <a href="#company" class="nav-link">Company</a>
+
+            <a href="#review" class="nav-link">Review</a>
+
+            <a href="#contact" class="nav-link">Contact</a>
+
+            <a href="tel:+8801689190142" class="phone-number">
+              <i class="ri-phone-line"></i> +880 1689 190142
+            </a>
+          </div>
+        </div>
+        <!-- Desktop Menu -->
+      </nav>
+    </header>
     <!-- Header End -->
 
     <!-- Main Start -->
@@ -69,6 +135,7 @@
     <!-- Scroll Reveal -->
 
     <!-- Main Js -->
+    <script src="main.js"></script>
     <!-- Main Js -->
   </body>
 </html>

@@ -3,3 +3,34 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+    @apply bg-secondColor font-Montserrat tracking-wider;
+}
+
+#nav-menu .nav-link,
+#nav-menu .phone-number,
+#nav-menu-2 .nav-link,
+#nav-menu-2 .phone-number {
+    @apply text-lg px-5 py-3 duration-300;
+}
+
+#nav-menu-2 .nav-link,
+#nav-menu-2 .phone-number {
+    @apply font-bold;
+}
+
+.phone-number:hover {
+    @apply text-firstColor;
+}
+
+/* active */
+#nav-menu .nav-link:hover,
+#nav-menu .active {
+    @apply bg-firstColor text-whiteColor;
+}
+
+#nav-menu-2 .nav-link:hover,
+#nav-menu-2 .active {
+    @apply text-firstColor;
+}
