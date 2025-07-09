@@ -8,6 +8,27 @@ body {
     @apply bg-secondColor font-Montserrat tracking-wider;
 }
 
+h1 {
+    @apply text-whiteColor text-3xl xl:text-5xl font-bold uppercase;
+}
+
+h2 {
+    @apply text-whiteColor md:text-3xl text-xl font-bold uppercase;
+}
+
+h3 {
+    @apply text-whiteColor md:text-2xl text-xl font-bold uppercase;
+}
+
+h4 {
+    @apply text-firstColor text-base font-bold uppercase;
+}
+
+p {
+    @apply text-paragraphColor;
+}
+
+/* Header Start */
 #nav-menu .nav-link,
 #nav-menu .phone-number,
 #nav-menu-2 .nav-link,
@@ -34,3 +55,115 @@ body {
 #nav-menu-2 .active {
     @apply text-firstColor;
 }
+/* active */
+/* Header End */
+
+/* Button */
+.btn {
+    @apply border border-firstColor bg-firstColor text-whiteColor px-5 py-2 uppercase duration-300;
+}
+
+.btn:hover {
+    @apply opacity-90;
+}
+
+.btn__outline {
+    @apply bg-transparent;
+}
+
+.btn__outline:hover {
+    @apply bg-firstColor;
+}
+
+/* Button */
+
+/* Carousel */
+.carousel {
+    @apply relative;
+}
+
+.carousel__inner {
+    @apply w-full overflow-hidden after:content-[""] after:block clear-both;
+}
+
+.carousel__item {
+    @apply relative float-left hidden w-full mr-[-100%];
+}
+
+/* slide effect */
+.carousel__item__active,
+.carousel__item__pos__next,
+.carousel__item__pos__prev {
+    @apply block;
+}
+
+.carousel__item__pos__next {
+    @apply left-full;
+}
+
+.carousel__item__pos__prev {
+    @apply left-[-100%]
+}
+
+.carousel__item__next {
+    @apply -translate-x-full duration-500 ease-in-out;
+}
+
+.carousel__item__prev {
+    @apply translate-x-full duration-500 ease-in-out;
+}
+/* slide effect */
+
+.carousel__img {
+    @apply block w-full;
+}
+
+/* fade effect */
+.carousel__fade .carousel__item__pos__next,
+.carousel__fade .carousel__item__pos__prev {
+    @apply left-0 opacity-0;
+}
+
+.carousel__fade .carousel__item__next, 
+.carousel__fade .carousel__item__prev  {
+    transform: none;
+    @apply opacity-100 duration-500 ease-in-out;
+}
+
+.carousel__fade .carousel__item__active.carousel__item__next,
+.carousel__fade .carousel__item__active.carousel__item__prev {
+    @apply opacity-0;
+}
+/* fade effect */
+
+.carousel__item h4 {
+    transform: translateY(-20px);
+    opacity: 0;
+    animation: showContent 0.5s linear forwards;
+
+}
+
+.carousel__item h4:nth-child(4) {
+    animation-delay: 0.6s;
+}
+
+.carousel__item h4:nth-child(3) {
+    animation-delay: 0.8s;
+}
+
+.carousel__item h4:nth-child(2) {
+    animation-delay: 1.0s;
+}
+
+.carousel__item h4:nth-child(1) {
+    animation-delay: 1.2s;
+}
+
+@keyframes showContent  {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Carousel */
+

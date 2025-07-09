@@ -25,6 +25,87 @@ navLink.forEach((link) => {
 /* Toggle Button */
 
 /* Carousel Carousel Slider Slideshow  */
+
+let onSlide = false;
+
+window.addEventListener("load", () => {
+  autoSlide();
+
+  const buttonPrev = document.querySelector(".carousel__button__prev");
+
+  const buttonNext = document.querySelector(".carousel__button__next");
+
+  buttonPrev.addEventListener("click", () => slide(getItemActiveIndex() + 1));
+
+  buttonNext.addEventListener("click", () => slide(getItemActiveIndex() - 1));
+});
+
+function autoSlide() {
+  setInterval(() => {
+    slide(getItemActiveIndex() + 1);
+  }, 5000);
+}
+
+function slide(toIndex) {
+  if (onSlide) return;
+
+  onSlide = true;
+
+  const itemsArray = Array.from(document.querySelectorAll(".carousel__item"));
+  const itemActive = document.querySelector(".carousel__item__active");
+
+  const itemActiveIndex = itemsArray.indexOf(itemActive);
+  let newItemActive = null;
+
+  if (toIndex > itemActiveIndex) {
+    if (toIndex >= itemsArray.length) {
+      toIndex = 0;
+    }
+
+    newItemActive = itemsArray[toIndex];
+
+    newItemActive.classList.add("carousel__item__pos__next");
+    setTimeout(() => {
+      newItemActive.classList.add("carousel__item__next");
+      itemActive.classList.add("carousel__item__next");
+    }, 20);
+  } else {
+    if (toIndex < 0) {
+      toIndex = itemsArray.length - 1;
+    }
+
+    newItemActive = itemsArray[toIndex];
+
+    newItemActive.classList.add("carousel__item__pos__prev");
+    setTimeout(() => {
+      newItemActive.classList.add("carousel__item__prev");
+      itemActive.classList.add("carousel__item__prev");
+    }, 20);
+  }
+
+  newItemActive.addEventListener(
+    "transitionend",
+    () => {
+      itemActive.className = "carousel__item";
+      newItemActive.className = "carousel__item carousel__item__active";
+      onSlide = false;
+    },
+    {
+      once: true,
+    }
+  );
+}
+
+function getItemActiveIndex() {
+  const itemsArray = Array.from(document.querySelectorAll(".carousel__item"));
+
+  const itemActive = document.querySelector(".carousel__item__active");
+
+  //if (!itemActive) return -1;
+
+  const itemActiveIndex = itemsArray.indexOf(itemActive);
+  return itemActiveIndex;
+}
 /* Carousel Carousel Slider Slideshow  */
 
 /* Effect MouseMove Effect */
