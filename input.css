@@ -90,6 +90,10 @@ p {
     @apply relative float-left hidden w-full mr-[-100%];
 }
 
+.carousel__img {
+    @apply block w-full;
+}
+
 /* slide effect */
 .carousel__item__active,
 .carousel__item__pos__next,
@@ -114,10 +118,6 @@ p {
 }
 /* slide effect */
 
-.carousel__img {
-    @apply block w-full;
-}
-
 /* fade effect */
 .carousel__fade .carousel__item__pos__next,
 .carousel__fade .carousel__item__pos__prev {
@@ -136,11 +136,18 @@ p {
 }
 /* fade effect */
 
+/* animation */
 .carousel__item h4 {
     transform: translateY(-20px);
     opacity: 0;
     animation: showContent 0.5s linear forwards;
+}
 
+@keyframes showContent  {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .carousel__item h4:nth-child(4) {
@@ -158,12 +165,7 @@ p {
 .carousel__item h4:nth-child(1) {
     animation-delay: 1.2s;
 }
+/* animation */
 
-@keyframes showContent  {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
 /* Carousel */
 

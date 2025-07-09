@@ -634,12 +634,12 @@ video {
   top: 0;
 }
 
-.z-50{
-  z-index: 50;
-}
-
 .-z-10{
   z-index: -10;
+}
+
+.z-50{
+  z-index: 50;
 }
 
 .mx-auto{
@@ -675,6 +675,10 @@ video {
   height: 100px;
 }
 
+.h-\[2000px\]{
+  height: 2000px;
+}
+
 .h-\[calc\(100\%-100px\)\]{
   height: calc(100% - 100px);
 }
@@ -687,12 +691,8 @@ video {
   height: 100vh;
 }
 
-.h-\[\]{
-  height: ;
-}
-
-.h-\[2000px\]{
-  height: 2000px;
+.w-1\/2{
+  width: 50%;
 }
 
 .w-12{
@@ -724,21 +724,8 @@ video {
   width: max-content;
 }
 
-.w-1{
-  width: 0.25rem;
-}
-
-.w-1\/2{
-  width: 50%;
-}
-
 .max-w-\[1920px\]{
   max-width: 1920px;
-}
-
-.translate-x-1{
-  --tw-translate-x: 0.25rem;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .translate-x-1\/2{
@@ -803,12 +790,12 @@ video {
   border-radius: 9999px;
 }
 
-.border-2{
-  border-width: 2px;
-}
-
 .border{
   border-width: 1px;
+}
+
+.border-2{
+  border-width: 2px;
 }
 
 .border-x{
@@ -1070,6 +1057,11 @@ p{
   width: 100%;
 }
 
+.carousel__img{
+  display: block;
+  width: 100%;
+}
+
 /* slide effect */
 
 .carousel__item__active,
@@ -1102,11 +1094,6 @@ p{
 
 /* slide effect */
 
-.carousel__img{
-  display: block;
-  width: 100%;
-}
-
 /* fade effect */
 
 .carousel__fade .carousel__item__pos__next,
@@ -1130,10 +1117,19 @@ p{
 
 /* fade effect */
 
+/* animation */
+
 .carousel__item h4 {
   transform: translateY(-20px);
   opacity: 0;
   animation: showContent 0.5s linear forwards;
+}
+
+@keyframes showContent  {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .carousel__item h4:nth-child(4) {
@@ -1152,12 +1148,7 @@ p{
   animation-delay: 1.2s;
 }
 
-@keyframes showContent  {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+/* animation */
 
 /* Carousel */
 
@@ -1194,6 +1185,10 @@ p{
 
   .lg\:w-\[30\%\]{
     width: 30%;
+  }
+
+  .lg\:w-\[70\%\]{
+    width: 70%;
   }
 
   .lg\:flex-row{
