@@ -173,3 +173,19 @@ p {
 
 /* Carousel */
 
+/* Process */
+.process__tab p, 
+.process__tab span {
+    @apply text-grayColor duration-300;
+}
+
+.process__tab:hover p,
+.process__tab-active p {
+    @apply text-whiteColor;
+}
+
+.process__tab:hover span,
+.process__tab-active span {
+    @apply text-firstColor;
+}
+/* Process */

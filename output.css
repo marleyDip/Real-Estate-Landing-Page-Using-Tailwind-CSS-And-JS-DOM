@@ -606,8 +606,16 @@ video {
   right: -0.25rem;
 }
 
+.bottom-0{
+  bottom: 0px;
+}
+
 .left-0{
   left: 0px;
+}
+
+.left-1\/2{
+  left: 50%;
 }
 
 .left-\[-100\%\]{
@@ -640,18 +648,6 @@ video {
 
 .top-\[0\]{
   top: 0;
-}
-
-.bottom-0{
-  bottom: 0px;
-}
-
-.left-1\/2{
-  left: 50%;
-}
-
-.left-1\/3{
-  left: 33.333333%;
 }
 
 .-z-10{
@@ -756,30 +752,21 @@ video {
   width: max-content;
 }
 
-.max-w-\[1920px\]{
-  max-width: 1920px;
-}
-
-.max-w-xl{
-  max-width: 36rem;
-}
-
 .max-w-3xl{
   max-width: 48rem;
 }
 
-.translate-x-1\/2{
-  --tw-translate-x: 50%;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.translate-x-1{
-  --tw-translate-x: 0.25rem;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+.max-w-\[1920px\]{
+  max-width: 1920px;
 }
 
 .-translate-x-1\/2{
   --tw-translate-x: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.translate-x-1\/2{
+  --tw-translate-x: 50%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -789,6 +776,10 @@ video {
 
 .cursor-pointer{
   cursor: pointer;
+}
+
+.grid-cols-1{
+  grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 
 .flex-col{
@@ -819,6 +810,10 @@ video {
   gap: 2.5rem;
 }
 
+.gap-14{
+  gap: 3.5rem;
+}
+
 .gap-2{
   gap: 0.5rem;
 }
@@ -831,19 +826,27 @@ video {
   gap: 2rem;
 }
 
-.gap-14{
-  gap: 3.5rem;
-}
-
 .gap-x-2{
   -moz-column-gap: 0.5rem;
        column-gap: 0.5rem;
+}
+
+.space-y-10 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-y-reverse: 0;
+  margin-top: calc(2.5rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(2.5rem * var(--tw-space-y-reverse));
 }
 
 .space-y-2 > :not([hidden]) ~ :not([hidden]){
   --tw-space-y-reverse: 0;
   margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
+}
+
+.space-y-3 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.75rem * var(--tw-space-y-reverse));
 }
 
 .space-y-5 > :not([hidden]) ~ :not([hidden]){
@@ -904,13 +907,13 @@ video {
   background-color: rgb(12 12 12 / var(--tw-bg-opacity, 1));
 }
 
+.bg-transparent{
+  background-color: transparent;
+}
+
 .bg-whiteColor{
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
-}
-
-.bg-transparent{
-  background-color: transparent;
 }
 
 .p-5{
@@ -936,12 +939,20 @@ video {
   padding-top: 5rem;
 }
 
+.pt-3{
+  padding-top: 0.75rem;
+}
+
 .pt-5{
   padding-top: 1.25rem;
 }
 
 .text-center{
   text-align: center;
+}
+
+.text-justify{
+  text-align: justify;
 }
 
 .text-start{
@@ -963,8 +974,17 @@ video {
   line-height: 1.75rem;
 }
 
+.text-xs{
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
 .font-bold{
   font-weight: 700;
+}
+
+.font-normal{
+  font-weight: 400;
 }
 
 .uppercase{
@@ -976,6 +996,11 @@ video {
   color: rgb(0 0 0 / var(--tw-text-opacity, 1));
 }
 
+.text-firstColor{
+  --tw-text-opacity: 1;
+  color: rgb(160 35 52 / var(--tw-text-opacity, 1));
+}
+
 .text-grayColor{
   color: #c4c4c450;
 }
@@ -983,6 +1008,10 @@ video {
 .text-whiteColor{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+
+.opacity-20{
+  opacity: 0.2;
 }
 
 .opacity-5{
@@ -993,19 +1022,15 @@ video {
   opacity: 0.5;
 }
 
-.opacity-20{
-  opacity: 0.2;
+.shadow-2xl{
+  --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 .shadow-md{
   --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
-.shadow-2xl{
-  --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
-  --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
@@ -1297,6 +1322,28 @@ p{
 
 /* Carousel */
 
+/* Process */
+
+.process__tab p, 
+.process__tab span{
+  color: #c4c4c450;
+  transition-duration: 300ms;
+}
+
+.process__tab:hover p,
+.process__tab-active p{
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+
+.process__tab:hover span,
+.process__tab-active span{
+  --tw-text-opacity: 1;
+  color: rgb(160 35 52 / var(--tw-text-opacity, 1));
+}
+
+/* Process */
+
 .hover\:-translate-y-1:hover{
   --tw-translate-y: -0.25rem;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -1339,6 +1386,10 @@ p{
 
   .lg\:w-\[70\%\]{
     width: 70%;
+  }
+
+  .lg\:grid-cols-2{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .lg\:flex-row{
@@ -1386,8 +1437,16 @@ p{
     height: 100vh;
   }
 
-  .xl\:max-w-56{
-    max-width: 14rem;
+  .xl\:w-1\/2{
+    width: 50%;
+  }
+
+  .xl\:max-w-60{
+    max-width: 15rem;
+  }
+
+  .xl\:max-w-64{
+    max-width: 16rem;
   }
 
   .xl\:max-w-lg{
@@ -1398,16 +1457,13 @@ p{
     max-width: 20rem;
   }
 
-  .xl\:max-w-6{
-    max-width: 1.5rem;
+  .xl\:border-spacing-y-6{
+    --tw-border-spacing-y: 1.5rem;
+    border-spacing: var(--tw-border-spacing-x) var(--tw-border-spacing-y);
   }
 
-  .xl\:max-w-60{
-    max-width: 15rem;
-  }
-
-  .xl\:max-w-64{
-    max-width: 16rem;
+  .xl\:grid-cols-3{
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .xl\:flex-row{
@@ -1434,6 +1490,16 @@ p{
     gap: 1.25rem;
   }
 
+  .xl\:gap-y-7{
+    row-gap: 1.75rem;
+  }
+
+  .xl\:space-y-5 > :not([hidden]) ~ :not([hidden]){
+    --tw-space-y-reverse: 0;
+    margin-top: calc(1.25rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(1.25rem * var(--tw-space-y-reverse));
+  }
+
   .xl\:self-start{
     align-self: flex-start;
   }
@@ -1447,6 +1513,10 @@ p{
     padding-bottom: 7rem;
   }
 
+  .xl\:pt-8{
+    padding-top: 2rem;
+  }
+
   .xl\:text-start{
     text-align: start;
   }
@@ -1455,5 +1525,9 @@ p{
     font-size: 3rem;
     line-height: 1;
   }
-}
 
+  .xl\:text-base{
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}

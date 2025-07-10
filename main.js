@@ -135,6 +135,74 @@ document.querySelector("#about").addEventListener("mousemove", (e) => {
 /* Effect MouseMove Effect */
 
 /* Tabs */
+document.addEventListener("DOMContentLoaded", () => {
+  const tabs = document.querySelectorAll(".process__tab");
+  const tabContent = document.getElementById("tab-content");
+  const tabImage = document.getElementById("tab-image");
+
+  const contentData = {
+    1: {
+      title: "Acquaintance with the customer",
+      paragraphs: [
+        "This stage is highly decisive as you can evaluate the work of your potential architect by browsing their portfolio. As a client, you may also assess whether the architecture listens to your needs and confirms that he or she understands them.",
+
+        "The first thing we do is meeting with our clients and talk through their goals on a future projects. During this meeting, feels free to communicates your ideas and asl lots of questions.",
+      ],
+      image: "assets/images/process/process-1.jpg",
+    },
+
+    2: {
+      title: "Project Concept Development",
+      paragraphs: [
+        "In this stage, we develop a project concept base don the client's preferences and ideas. We present the concept in a visual format to ensure that the clients's vision is accurately represented.",
+
+        "This phase involves a lot of back and forth communication, allowing  us to refine the project concept until  it meets the client's expectations.",
+      ],
+      image: "assets/images/process/process-2.jpg",
+    },
+
+    3: {
+      title: "Working on Interior And Exterior",
+      paragraphs: [
+        "once the concept is approved, we start working on the interior designs. We make sure that all design elements are in harmony, creating a cohesive and aesthetically pleasing result.",
+
+        "We present detailed plans and 3D visualization to help the client understand how the final project will look and feel.",
+      ],
+      image: "assets/images/process/process-3.jpg",
+    },
+
+    4: {
+      title: "Finishing Touches for  your Future Home",
+      paragraphs: [
+        "The final stage involves adding the finishing touches to the projects. We ensure that every detail is perfect and meets the client's standard.",
+
+        "This is where we add the final flourishes that turn a house into a home, making sure it is ready for the client to move in.",
+      ],
+      image: "assets/images/process/process-4.jpg",
+    },
+  };
+
+  tabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
+      tabs.forEach((t) => t.classList.remove("process__tab-active"));
+
+      tab.classList.add("process__tab-active");
+
+      const tabIndex = tab.getAttribute("data-tab");
+
+      const data = contentData[tabIndex];
+
+      tabContent.innerHTML = `
+        <h1 class="text-firstColor">${data.title}</h1>
+
+        <p class="text-grayColor text-justify">${data.paragraphs[0]}</p>
+
+        <p class="text-grayColor text-justify">${data.paragraphs[1]}</p>
+    `;
+      tabImage.src = data.image;
+    });
+  });
+});
 /* Tabs */
 
 /* Swiper */
