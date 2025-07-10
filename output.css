@@ -590,6 +590,10 @@ video {
   }
 }
 
+.pointer-events-none{
+  pointer-events: none;
+}
+
 .fixed{
   position: fixed;
 }
@@ -662,6 +666,10 @@ video {
   z-index: 50;
 }
 
+.z-20{
+  z-index: 20;
+}
+
 .mx-auto{
   margin-left: auto;
   margin-right: auto;
@@ -677,6 +685,10 @@ video {
 
 .mb-5{
   margin-bottom: 1.25rem;
+}
+
+.mt-10{
+  margin-top: 2.5rem;
 }
 
 .inline-block{
@@ -727,6 +739,10 @@ video {
   height: 100vh;
 }
 
+.h-48{
+  height: 12rem;
+}
+
 .w-1\/2{
   width: 50%;
 }
@@ -758,6 +774,14 @@ video {
 .w-max{
   width: -moz-max-content;
   width: max-content;
+}
+
+.w-4{
+  width: 1rem;
+}
+
+.w-4\/5{
+  width: 80%;
 }
 
 .max-w-3xl{
@@ -843,6 +867,15 @@ video {
        column-gap: 0.5rem;
 }
 
+.gap-x-20{
+  -moz-column-gap: 5rem;
+       column-gap: 5rem;
+}
+
+.gap-y-10{
+  row-gap: 2.5rem;
+}
+
 .space-y-10 > :not([hidden]) ~ :not([hidden]){
   --tw-space-y-reverse: 0;
   margin-top: calc(2.5rem * calc(1 - var(--tw-space-y-reverse)));
@@ -904,6 +937,11 @@ video {
   border-color: #c4c4c450;
 }
 
+.border-firstColor{
+  --tw-border-opacity: 1;
+  border-color: rgb(160 35 52 / var(--tw-border-opacity, 1));
+}
+
 .bg-firstColor{
   --tw-bg-opacity: 1;
   background-color: rgb(160 35 52 / var(--tw-bg-opacity, 1));
@@ -926,6 +964,19 @@ video {
 .bg-whiteColor{
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[\#\]{
+  background-color: #;
+}
+
+.bg-\[\#f5f5f5\]{
+  --tw-bg-opacity: 1;
+  background-color: rgb(245 245 245 / var(--tw-bg-opacity, 1));
+}
+
+.to-current{
+  --tw-gradient-to: currentColor var(--tw-gradient-to-position);
 }
 
 .p-5{
@@ -1040,6 +1091,10 @@ video {
 
 .opacity-50{
   opacity: 0.5;
+}
+
+.opacity-0{
+  opacity: 0;
 }
 
 .shadow-2xl{
@@ -1450,6 +1505,11 @@ p{
   color: #c4c4c450;
 }
 
+.hover\:text-firstColor:hover{
+  --tw-text-opacity: 1;
+  color: rgb(160 35 52 / var(--tw-text-opacity, 1));
+}
+
 @media (min-width: 340px){
   .sm\:mr-32{
     margin-right: 8rem;
@@ -1469,6 +1529,15 @@ p{
 }
 
 @media (min-width: 768px){
+  .lg\:col-span-2{
+    grid-column: span 2 / span 2;
+  }
+
+  .lg\:mx-auto{
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .lg\:block{
     display: block;
   }
@@ -1491,6 +1560,26 @@ p{
 
   .lg\:w-\[40\%\]{
     width: 40%;
+  }
+
+  .lg\:w-2\/5{
+    width: 40%;
+  }
+
+  .lg\:w-\[\]{
+    width: ;
+  }
+
+  .lg\:w-\[45\]{
+    width: 45;
+  }
+
+  .lg\:w-\[45\%\]{
+    width: 45%;
+  }
+
+  .lg\:w-full{
+    width: 100%;
   }
 
   .lg\:grid-cols-2{
@@ -1525,6 +1614,10 @@ p{
 }
 
 @media (min-width: 1180px){
+  .xl\:col-span-1{
+    grid-column: span 1 / span 1;
+  }
+
   .xl\:mx-auto{
     margin-left: auto;
     margin-right: auto;
@@ -1556,6 +1649,10 @@ p{
 
   .xl\:w-full{
     width: 100%;
+  }
+
+  .xl\:w-1\/3{
+    width: 33.333333%;
   }
 
   .xl\:max-w-60{
@@ -1619,6 +1716,10 @@ p{
     gap: 1.25rem;
   }
 
+  .xl\:gap-32{
+    gap: 8rem;
+  }
+
   .xl\:gap-y-7{
     row-gap: 1.75rem;
   }
@@ -1648,6 +1749,10 @@ p{
 
   .xl\:pb-2{
     padding-bottom: 0.5rem;
+  }
+
+  .xl\:text-left{
+    text-align: left;
   }
 
   .xl\:text-start{
