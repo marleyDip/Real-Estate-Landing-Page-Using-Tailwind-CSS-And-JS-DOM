@@ -35,17 +35,20 @@ window.addEventListener("load", () => {
 
   const buttonNext = document.querySelector(".carousel__button__next");
 
-  buttonPrev.addEventListener("click", () => slide(getItemActiveIndex() + 1));
+  buttonPrev.addEventListener("click", () => slide(getItemActiveIndex() - 1));
 
-  buttonNext.addEventListener("click", () => slide(getItemActiveIndex() - 1));
+  buttonNext.addEventListener("click", () => slide(getItemActiveIndex() + 1));
 });
 
+// function autoSlide
 function autoSlide() {
   setInterval(() => {
     slide(getItemActiveIndex() + 1);
   }, 5000);
 }
+// function autoSlide
 
+// function slide
 function slide(toIndex) {
   if (onSlide) return;
 
@@ -95,7 +98,9 @@ function slide(toIndex) {
     }
   );
 }
+// function slide
 
+// function getItemActiveIndex
 function getItemActiveIndex() {
   const itemsArray = Array.from(document.querySelectorAll(".carousel__item"));
 
@@ -106,6 +111,8 @@ function getItemActiveIndex() {
   const itemActiveIndex = itemsArray.indexOf(itemActive);
   return itemActiveIndex;
 }
+// function getItemActiveIndex
+
 /* Carousel Carousel Slider Slideshow  */
 
 /* Effect MouseMove Effect */
