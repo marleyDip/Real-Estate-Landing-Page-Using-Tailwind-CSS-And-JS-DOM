@@ -8,12 +8,16 @@ body {
     @apply bg-secondColor font-Montserrat tracking-wider;
 }
 
+section {
+    @apply py-20 md:py-28;
+}
+
 h1 {
     @apply text-whiteColor text-3xl xl:text-5xl font-bold uppercase;
 }
 
 h2 {
-    @apply text-whiteColor md:text-3xl text-xl font-bold uppercase;
+    @apply text-blackColor md:text-3xl text-xl font-bold uppercase;
 }
 
 h3 {
@@ -136,7 +140,7 @@ p {
 }
 /* fade effect */
 
-/* animation */
+/* animation for header 4 */
 .carousel__item h4 {
     transform: translateY(-20px);
     opacity: 0;
@@ -165,7 +169,7 @@ p {
 .carousel__item h4:nth-child(1) {
     animation-delay: 1.2s;
 }
-/* animation */
+/* animation for header 4 */
 
 /* Carousel */
 

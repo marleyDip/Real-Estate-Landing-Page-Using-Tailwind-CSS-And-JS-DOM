@@ -116,6 +116,22 @@ function getItemActiveIndex() {
 /* Carousel Carousel Slider Slideshow  */
 
 /* Effect MouseMove Effect */
+function handleMouseMove(e, image) {
+  const x = e.clientX / window.innerHeight;
+  const y = e.clientY / window.innerHeight;
+
+  const moveX = (x - 0.5) * 50;
+  const moveY = (y - 0.5) * 50;
+
+  image.style.transform = `translate(${moveX}px, ${moveY}px)`;
+}
+
+document.querySelector("#about").addEventListener("mousemove", (e) => {
+  const image = document.querySelector(".background-image-about");
+
+  handleMouseMove(e, image);
+});
+
 /* Effect MouseMove Effect */
 
 /* Tabs */
