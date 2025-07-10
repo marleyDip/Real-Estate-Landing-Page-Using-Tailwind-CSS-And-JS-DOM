@@ -116,6 +116,11 @@ function getItemActiveIndex() {
 /* Carousel Carousel Slider Slideshow  */
 
 /* Effect MouseMove Effect */
+const sections = [
+  { id: "#about", imageClass: ".background-image-about" },
+  { id: "#company", imageClass: ".background-image-company" },
+];
+
 function handleMouseMove(e, image) {
   const x = e.clientX / window.innerHeight;
   const y = e.clientY / window.innerHeight;
@@ -126,11 +131,27 @@ function handleMouseMove(e, image) {
   image.style.transform = `translate(${moveX}px, ${moveY}px)`;
 }
 
-document.querySelector("#about").addEventListener("mousemove", (e) => {
-  const image = document.querySelector(".background-image-about");
+sections.forEach((section) => {
+  document.querySelector(section.id).addEventListener("mousemove", (e) => {
+    const image = document.querySelector(section.imageClass);
 
-  handleMouseMove(e, image);
+    handleMouseMove(e, image);
+  });
 });
+
+// about us section
+// document.querySelector("#about").addEventListener("mousemove", (e) => {
+//   const image = document.querySelector(".background-image-about");
+
+//   handleMouseMove(e, image);
+// });
+
+// company section
+// document.querySelector("#company").addEventListener("mousemove", (e) => {
+//   const image = document.querySelector(".background-image-company");
+
+//   handleMouseMove(e, image);
+// });
 
 /* Effect MouseMove Effect */
 
