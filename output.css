@@ -610,12 +610,24 @@ video {
   inset: 0px;
 }
 
+.-bottom-1\/2{
+  bottom: -50%;
+}
+
 .-right-1{
   right: -0.25rem;
 }
 
 .bottom-0{
   bottom: 0px;
+}
+
+.bottom-20{
+  bottom: 5rem;
+}
+
+.bottom-4{
+  bottom: 1rem;
 }
 
 .left-0{
@@ -638,6 +650,10 @@ video {
   left: 30%;
 }
 
+.right-4{
+  right: 1rem;
+}
+
 .top-0{
   top: 0px;
 }
@@ -658,12 +674,12 @@ video {
   top: 0;
 }
 
-.bottom-20{
-  bottom: 5rem;
-}
-
 .-z-10{
   z-index: -10;
+}
+
+.-z-20{
+  z-index: -20;
 }
 
 .z-10{
@@ -676,10 +692,6 @@ video {
 
 .z-50{
   z-index: 50;
-}
-
-.-z-20{
-  z-index: -20;
 }
 
 .mx-auto{
@@ -787,8 +799,16 @@ video {
   width: 8rem;
 }
 
+.w-36{
+  width: 9rem;
+}
+
 .w-4\/5{
   width: 80%;
+}
+
+.w-40{
+  width: 10rem;
 }
 
 .w-6{
@@ -804,12 +824,12 @@ video {
   width: max-content;
 }
 
-.w-40{
-  width: 10rem;
-}
-
 .max-w-3xl{
   max-width: 48rem;
+}
+
+.max-w-4xl{
+  max-width: 56rem;
 }
 
 .max-w-5xl{
@@ -822,10 +842,6 @@ video {
 
 .max-w-lg{
   max-width: 32rem;
-}
-
-.max-w-4xl{
-  max-width: 56rem;
 }
 
 .-translate-x-1\/2{
@@ -910,6 +926,12 @@ video {
 
 .gap-y-10{
   row-gap: 2.5rem;
+}
+
+.space-x-5 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-x-reverse: 0;
+  margin-right: calc(1.25rem * var(--tw-space-x-reverse));
+  margin-left: calc(1.25rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
 .space-y-10 > :not([hidden]) ~ :not([hidden]){
@@ -1015,9 +1037,19 @@ video {
   padding: 1.25rem;
 }
 
+.px-3{
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
 .px-5{
   padding-left: 1.25rem;
   padding-right: 1.25rem;
+}
+
+.py-1{
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
 }
 
 .py-12{
@@ -1028,6 +1060,11 @@ video {
 .py-2{
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+}
+
+.py-20{
+  padding-top: 5rem;
+  padding-bottom: 5rem;
 }
 
 .pb-1{
@@ -1056,6 +1093,11 @@ video {
 
 .text-start{
   text-align: start;
+}
+
+.text-2xl{
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 
 .text-5xl{
@@ -1114,6 +1156,10 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 
+.opacity-10{
+  opacity: 0.1;
+}
+
 .opacity-20{
   opacity: 0.2;
 }
@@ -1126,8 +1172,8 @@ video {
   opacity: 0.5;
 }
 
-.opacity-10{
-  opacity: 0.1;
+.opacity-70{
+  opacity: 0.7;
 }
 
 .shadow-2xl{
@@ -1142,13 +1188,38 @@ video {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+.shadow-sm{
+  --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
 .outline-none{
   outline: 2px solid transparent;
   outline-offset: 2px;
 }
 
+.transition-transform{
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
 .duration-300{
   transition-duration: 300ms;
+}
+
+.duration-200{
+  transition-duration: 200ms;
+}
+
+.ease-in{
+  transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+}
+
+html{
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 body{
@@ -1525,6 +1596,11 @@ p{
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.hover\:-translate-y-1\/2:hover{
+  --tw-translate-y: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .hover\:text-firstColor:hover{
   --tw-text-opacity: 1;
   color: rgb(160 35 52 / var(--tw-text-opacity, 1));
@@ -1534,8 +1610,9 @@ p{
   color: #c4c4c450;
 }
 
-.hover\:opacity-10:hover{
-  opacity: 0.1;
+.hover\:text-whiteColor:hover{
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 
 .hover\:opacity-100:hover{
@@ -1557,6 +1634,21 @@ p{
   .md\:px-10{
     padding-left: 2.5rem;
     padding-right: 2.5rem;
+  }
+
+  .md\:px-4{
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .md\:py-2{
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .md\:py-28{
+    padding-top: 7rem;
+    padding-bottom: 7rem;
   }
 }
 
@@ -1749,20 +1841,16 @@ p{
     gap: 4rem;
   }
 
+  .xl\:gap-20{
+    gap: 5rem;
+  }
+
   .xl\:gap-32{
     gap: 8rem;
   }
 
   .xl\:gap-5{
     gap: 1.25rem;
-  }
-
-  .xl\:gap-20{
-    gap: 5rem;
-  }
-
-  .xl\:gap-4{
-    gap: 1rem;
   }
 
   .xl\:gap-y-7{
