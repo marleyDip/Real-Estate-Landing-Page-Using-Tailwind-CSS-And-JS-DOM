@@ -227,6 +227,23 @@ document.addEventListener("DOMContentLoaded", () => {
 /* Tabs */
 
 /* Swiper */
+const swiper = new Swiper(".swiper", {
+  // Optional parameters
+  loop: true,
+  speed: 1000,
+  spaceBetween: 30,
+  autoplay:  {
+    delay: 3000,
+    disableOnInteraction: false
+  },
+
+  // If we need pagination
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  grabCursor: true,
+});
 /* Swiper */
 
 /* Show Scroll Up */
