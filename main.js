@@ -1,4 +1,5 @@
-/* Toggle Button */
+/* Toggle Button - header */
+
 const navMenu = document.getElementById("nav-menu");
 const navMenu2 = document.getElementById("nav-menu-2");
 
@@ -21,8 +22,7 @@ navLink.forEach((link) => {
   });
 });
 
-//
-/* Toggle Button */
+/* Toggle Button - header */
 
 /* Carousel Carousel Slider Slideshow  */
 
@@ -115,10 +115,12 @@ function getItemActiveIndex() {
 
 /* Carousel Carousel Slider Slideshow  */
 
-/* Effect MouseMove Effect */
+/* Effect MouseMove Effect - about, company, contact */
+
 const sections = [
   { id: "#about", imageClass: ".background-image-about" },
   { id: "#company", imageClass: ".background-image-company" },
+  { id: "#contact", imageClass: ".background-image-contact" },
 ];
 
 function handleMouseMove(e, image) {
@@ -153,9 +155,17 @@ sections.forEach((section) => {
 //   handleMouseMove(e, image);
 // });
 
-/* Effect MouseMove Effect */
+// contact section
+// document.querySelector("#contact").addEventListener("mousemove", (e) => {
+//   const image = document.querySelector(".background-image-contact");
 
-/* Tabs */
+//   handleMouseMove(e, image);
+// });
+
+/* Effect MouseMove Effect - about, company, contact */
+
+/* Tabs - process */
+
 document.addEventListener("DOMContentLoaded", () => {
   const tabs = document.querySelectorAll(".process__tab");
   const tabContent = document.getElementById("tab-content");
@@ -224,17 +234,19 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
-/* Tabs */
 
-/* Swiper */
+/* Tabs - process */
+
+/* Swiper - review */
+
 const swiper = new Swiper(".swiper", {
   // Optional parameters
   loop: true,
   speed: 1000,
   spaceBetween: 30,
-  autoplay:  {
+  autoplay: {
     delay: 3000,
-    disableOnInteraction: false
+    disableOnInteraction: false,
   },
 
   // If we need pagination
@@ -244,7 +256,8 @@ const swiper = new Swiper(".swiper", {
   },
   grabCursor: true,
 });
-/* Swiper */
+
+/* Swiper - review */
 
 /* Show Scroll Up */
 /* Show Scroll Up */

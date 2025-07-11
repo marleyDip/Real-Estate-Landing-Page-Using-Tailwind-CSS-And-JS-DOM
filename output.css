@@ -658,6 +658,10 @@ video {
   top: 0;
 }
 
+.bottom-20{
+  bottom: 5rem;
+}
+
 .-z-10{
   z-index: -10;
 }
@@ -814,6 +818,14 @@ video {
 
 .max-w-\[1920px\]{
   max-width: 1920px;
+}
+
+.max-w-lg{
+  max-width: 32rem;
+}
+
+.max-w-4xl{
+  max-width: 56rem;
 }
 
 .-translate-x-1\/2{
@@ -1747,6 +1759,10 @@ p{
 
   .xl\:gap-20{
     gap: 5rem;
+  }
+
+  .xl\:gap-4{
+    gap: 1rem;
   }
 
   .xl\:gap-y-7{
