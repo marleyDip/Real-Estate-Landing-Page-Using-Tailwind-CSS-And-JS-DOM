@@ -311,4 +311,48 @@ window.addEventListener("scroll", activeLink);
 /* Scroll Sections Active Link */
 
 /* Scroll Reveal Animation */
+
+const sr = ScrollReveal({
+  origin: "left",
+  distance: "60px",
+  duration: 1500,
+  delay: 300,
+  reset: true,
+});
+
+// about, process, company,
+sr.reveal(
+  ".about__item, .process__subtitle, .process__title, .process__tabtitle, .process__tabcontent, .company__content h2, .company__content h4",
+  { interval: 100 }
+);
+
+// about, process, company, contact
+sr.reveal(
+  ".about__form form, .process__image, .process__tab, .company__content img, .contact__form form",
+  {
+    origin: "top",
+    scale: 0.5,
+    delay: 700,
+  }
+);
+
+// about, company, contact
+sr.reveal(
+  ".about__form h2, .about__form  h4, .company__item, .contact__form h2, .contact__form h4",
+  {
+    origin: "right",
+    interval: 100,
+  }
+);
+
+// blog , review, footer
+sr.reveal(".blog__top, footer", {
+  origin: "top",
+});
+
+sr.reveal(".blog__item, .review__brand img", {
+  origin: "top",
+  interval: 100,
+});
+
 /* Scroll Reveal Animation */
