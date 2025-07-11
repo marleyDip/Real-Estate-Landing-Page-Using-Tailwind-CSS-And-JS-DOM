@@ -14,6 +14,4 @@
 
 ## 📸 *Project Preview*
 
-<img width="1920" height="1080" alt="real-estate-tailwind-css" src="https://github.com/user-attachments/assets/52febe53-d5cd-4508-8fcf-218611dae86f" />
-
-
+<img width="1900" height="1080" alt="real-estate-tailwind-css" src="https://github.com/user-attachments/assets/3dee0c44-f30a-42d7-853b-49b6e5ab0c06" />
